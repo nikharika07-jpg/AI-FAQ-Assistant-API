@@ -1,0 +1,1 @@
+const jwt=require("jsonwebtoken");exports.signToken=u=>jwt.sign({id:u._id.toString(),email:u.email},process.env.JWT_SECRET,{expiresIn:"2h"});exports.escapeRegex=v=>v.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");

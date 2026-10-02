@@ -1,0 +1,9 @@
+{
+  "name":"ai-faq-assistant-api","version":"1.1.0",
+  "description":"Modified RESTful FAQ Management API integrated with Google Gemini AI",
+  "main":"src/server.js",
+  "scripts":{"start":"node src/server.js","dev":"node --watch src/server.js","test:api":"node test_api.js"},
+  "keywords":["express","mongodb","mongoose","gemini","faq","jwt"],"license":"ISC",
+  "engines":{"node":">=20.0.0"},
+  "dependencies":{"@google/genai":"^2.10.0","bcrypt":"^6.0.0","cors":"^2.8.6","dotenv":"^17.4.2","express":"^5.2.1","jsonwebtoken":"^9.0.3","mongoose":"^9.7.2"}
+}

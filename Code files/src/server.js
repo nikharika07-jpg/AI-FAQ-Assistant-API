@@ -1,0 +1,1 @@
+require("dotenv").config();const app=require("./app"),connectDB=require("./config/db"),PORT=process.env.PORT||5000;(async()=>{try{await connectDB();app.listen(PORT,()=>console.log(`Server running on http://localhost:${PORT}`));}catch(e){console.error("Startup failed:",e.message);process.exit(1);}})();

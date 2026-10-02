@@ -1,0 +1,1 @@
+const clean=v=>typeof v==="string"?v.trim():v;const validate=fields=>(req,res,next)=>{for(const f of fields)if(req.body[f]!==undefined)req.body[f]=clean(req.body[f]);next();};module.exports={validate};

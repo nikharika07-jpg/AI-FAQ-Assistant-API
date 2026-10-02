@@ -1,0 +1,1 @@
+const r=require("express").Router(),c=require("../controllers/faqController"),p=require("../middleware/authMiddleware");r.get("/search",c.searchFAQs);r.get("/",c.getAllFAQs);r.get("/:id",c.getFAQById);r.post("/",p,c.createFAQ);r.put("/:id",p,c.updateFAQ);r.delete("/:id",p,c.deleteFAQ);module.exports=r;

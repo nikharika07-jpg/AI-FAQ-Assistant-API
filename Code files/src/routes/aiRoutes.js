@@ -1,0 +1,1 @@
+const r=require("express").Router(),c=require("../controllers/aiController"),p=require("../middleware/authMiddleware");r.use(p);r.post("/answer",c.answer);r.post("/generate-faq",c.generateFAQ);module.exports=r;

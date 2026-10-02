@@ -1,0 +1,3 @@
+const mongoose=require("mongoose");const CATEGORIES=["Technology","Education","Health","Banking","General"];
+const schema=new mongoose.Schema({question:{type:String,required:true,trim:true,minlength:5,maxlength:500},answer:{type:String,required:true,trim:true,minlength:2,maxlength:5000},category:{type:String,enum:CATEGORIES,default:"General",index:true},tags:[{type:String,trim:true,lowercase:true,maxlength:40}],createdBy:{type:mongoose.Schema.Types.ObjectId,ref:"User",required:true}},{timestamps:true});
+schema.index({question:"text",answer:"text",category:"text",tags:"text"});module.exports=mongoose.model("FAQ",schema);module.exports.CATEGORIES=CATEGORIES;
